@@ -25,7 +25,8 @@ Ce projet implémente une API REST simple pour une calculatrice, permettant d'ef
 1.  Assurez-vous que votre serveur Tomcat est arrêté.
 2.  Copiez le fichier `target/tp3-calculatrice.war` dans le dossier `webapps` de votre installation Tomcat.
 3.  Démarrez Tomcat (ex: `bin/startup.sh` ou `bin/startup.bat`).
-4.  Le service sera accessible à l'adresse : `http://localhost:8080/tp3-calculatrice` (le port par défaut est généralement 8080).
+4.  Le service sera accessible à l'adresse : `http://localhost:8080/tp3-calculatrice`
+    *   **Note :** Si vous avez configuré Tomcat sur un autre port (ex: 8090 suite à des conflits), remplacez `8080` par votre port dans l'URL (ex: `http://localhost:8090/tp3-calculatrice`).
 
 ## Utilisation de l'API
 
@@ -35,7 +36,7 @@ L'API expose les endpoints suivants sous le chemin de base `/api/calcul`.
 *   **Méthode :** `GET`
 *   **URL :** `/api/calcul/somme`
 *   **Paramètres :** `a` (nombre), `b` (nombre)
-*   **Exemple :** `http://localhost:8080/tp3-calculatrice/api/calcul/somme?a=10&b=5`
+*   **Exemple :** `http://localhost:8080/tp3-calculatrice/api/calcul/somme?a=10&b=5` (ou port 8090)
 *   **Réponse JSON :**
     ```json
     {
